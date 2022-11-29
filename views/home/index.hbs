@@ -5,7 +5,9 @@
 
 <h2>Select cookie addons</h2>
 {{#each addons}}
-<a href="/configurator/add-addon/{{this.[0]}}">Add {{this.[0]}} for {{this.[1]}} PLN</a>
+    {{#if (isNotInArray @root.cookie.addons this.[0])}}
+        <a href="/configurator/add-addon/{{this.[0]}}">Add {{this.[0]}} for {{this.[1]}} PLN</a>
+    {{/if}}
 {{/each}}
 
 {{#if cookie.base}}

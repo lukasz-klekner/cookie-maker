@@ -4,7 +4,7 @@
 {{> base-selector}}
 
 <h2>Select cookie addons</h2>
-{{#each addons}}
+{{#each allAddons}}
         <a class="btn {{#if (isInArray @root.cookie.addons this.[0])}}btn-disabled{{/if}}" href="/configurator/add-addon/{{this.[0]}}">Add {{this.[0]}} for {{this.[1]}} PLN</a>
 {{/each}}
 
